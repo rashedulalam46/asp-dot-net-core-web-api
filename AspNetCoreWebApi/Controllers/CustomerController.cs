@@ -55,8 +55,9 @@ namespace AspNetCoreWebApi.Controllers
             }
         }
 
+        //[HttpPost("SaveData")]
         [HttpPost]
-        [Route("SaveData")]
+        //[Route("SaveData")]
         public async Task<ActionResult<Customers>> SaveData(Customers customers)
         {
             customers.CustomerId = (new Random()).Next(100, 1000);
