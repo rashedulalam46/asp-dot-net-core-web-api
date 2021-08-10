@@ -67,8 +67,9 @@ namespace AspNetCoreWebApi.Controllers
         }
 
         // DELETE: api/Products/5
-        [HttpDelete("{id}")]
-        [Route("DeleteData/{id}")]
+        //[HttpDelete("{id}")]
+        //[Route("DeleteData/{id}")]
+        [HttpDelete("DeleteData")]
         public async Task<ActionResult<Customers>> DeleteData(int id)
         {
             var customers = await _apiDbContext.Customers.FindAsync(id);
