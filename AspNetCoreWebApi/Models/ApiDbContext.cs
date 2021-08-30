@@ -12,7 +12,6 @@ namespace AspNetCoreWebApi.Models
         {
 
         }
-
         public DbSet<Customers> Customers { get; set; }
     }
 }
