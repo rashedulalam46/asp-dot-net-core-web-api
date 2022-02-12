@@ -23,7 +23,6 @@ namespace AspNetCoreWebApi.Controllers
         //[Route("GetData")]
         public async Task<ActionResult<IEnumerable<Customers>>> GetData()
         {
-
             try
             {
                 var res = await _apiDbContext.Customers.OrderBy(x => x.FirstName).ToListAsync();
@@ -42,7 +41,6 @@ namespace AspNetCoreWebApi.Controllers
         //[Route("GetData/{id}")]
         public async Task<ActionResult<IEnumerable<Customers>>> GetData(int id)
         {
-
             try
             {
                 var res = await _apiDbContext.Customers.Where(x => x.CustomerId == id).OrderBy(x => x.FirstName).ToListAsync();
@@ -78,7 +76,6 @@ namespace AspNetCoreWebApi.Controllers
             {
                 return NotFound();
             }
-
             _apiDbContext.Customers.Remove(customers);
             await _apiDbContext.SaveChangesAsync();
 
