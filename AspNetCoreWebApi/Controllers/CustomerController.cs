@@ -31,7 +31,6 @@ namespace AspNetCoreWebApi.Controllers
             }
             catch (Exception ex)
             {
-
                 return NotFound();
             }
         }
@@ -49,6 +48,7 @@ namespace AspNetCoreWebApi.Controllers
             }
             catch (Exception ex)
             {
+                //write error log
                 return NotFound();
             }
         }
